@@ -17,8 +17,7 @@ _$Articol$ _$$Articol$FromJson(Map<String, dynamic> json) => _$Articol$(
       favorite: json['favorite'] as bool? ?? false,
     );
 
-Map<String, dynamic> _$$Articol$ToJson(_$Articol$ instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$Articol$ToJson(_$Articol$ instance) => <String, dynamic>{
       'created_at': instance.createdAt.toIso8601String(),
       'title': instance.title,
       'url': instance.url,
@@ -30,13 +29,11 @@ Map<String, dynamic> _$$Articol$ToJson(_$Articol$ instance) =>
     };
 
 _$AppState$ _$$AppState$FromJson(Map<String, dynamic> json) => _$AppState$(
-      articole: (json['articole'] as List<dynamic>?)
-              ?.map((e) => Articol.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const <Articol>[],
+      articole:
+          (json['articole'] as List<dynamic>?)?.map((e) => Articol.fromJson(e as Map<String, dynamic>)).toList() ??
+              const <Articol>[],
     );
 
-Map<String, dynamic> _$$AppState$ToJson(_$AppState$ instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$AppState$ToJson(_$AppState$ instance) => <String, dynamic>{
       'articole': instance.articole,
     };

@@ -64,13 +64,11 @@ mixin _$GetNews {
 
 /// @nodoc
 abstract class $GetNewsCopyWith<$Res> {
-  factory $GetNewsCopyWith(GetNews value, $Res Function(GetNews) then) =
-      _$GetNewsCopyWithImpl<$Res, GetNews>;
+  factory $GetNewsCopyWith(GetNews value, $Res Function(GetNews) then) = _$GetNewsCopyWithImpl<$Res, GetNews>;
 }
 
 /// @nodoc
-class _$GetNewsCopyWithImpl<$Res, $Val extends GetNews>
-    implements $GetNewsCopyWith<$Res> {
+class _$GetNewsCopyWithImpl<$Res, $Val extends GetNews> implements $GetNewsCopyWith<$Res> {
   _$GetNewsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -81,18 +79,14 @@ class _$GetNewsCopyWithImpl<$Res, $Val extends GetNews>
 
 /// @nodoc
 abstract class _$$GetNewsStartCopyWith<$Res> {
-  factory _$$GetNewsStartCopyWith(
-          _$GetNewsStart value, $Res Function(_$GetNewsStart) then) =
+  factory _$$GetNewsStartCopyWith(_$GetNewsStart value, $Res Function(_$GetNewsStart) then) =
       __$$GetNewsStartCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GetNewsStartCopyWithImpl<$Res>
-    extends _$GetNewsCopyWithImpl<$Res, _$GetNewsStart>
+class __$$GetNewsStartCopyWithImpl<$Res> extends _$GetNewsCopyWithImpl<$Res, _$GetNewsStart>
     implements _$$GetNewsStartCopyWith<$Res> {
-  __$$GetNewsStartCopyWithImpl(
-      _$GetNewsStart _value, $Res Function(_$GetNewsStart) _then)
-      : super(_value, _then);
+  __$$GetNewsStartCopyWithImpl(_$GetNewsStart _value, $Res Function(_$GetNewsStart) _then) : super(_value, _then);
 }
 
 /// @nodoc
@@ -107,8 +101,7 @@ class _$GetNewsStart implements GetNewsStart {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GetNewsStart);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$GetNewsStart);
   }
 
   @override
@@ -189,19 +182,16 @@ abstract class GetNewsStart implements GetNews {
 
 /// @nodoc
 abstract class _$$GetNewsSuccessfulCopyWith<$Res> {
-  factory _$$GetNewsSuccessfulCopyWith(
-          _$GetNewsSuccessful value, $Res Function(_$GetNewsSuccessful) then) =
+  factory _$$GetNewsSuccessfulCopyWith(_$GetNewsSuccessful value, $Res Function(_$GetNewsSuccessful) then) =
       __$$GetNewsSuccessfulCopyWithImpl<$Res>;
   @useResult
   $Res call({List<Articol> articole});
 }
 
 /// @nodoc
-class __$$GetNewsSuccessfulCopyWithImpl<$Res>
-    extends _$GetNewsCopyWithImpl<$Res, _$GetNewsSuccessful>
+class __$$GetNewsSuccessfulCopyWithImpl<$Res> extends _$GetNewsCopyWithImpl<$Res, _$GetNewsSuccessful>
     implements _$$GetNewsSuccessfulCopyWith<$Res> {
-  __$$GetNewsSuccessfulCopyWithImpl(
-      _$GetNewsSuccessful _value, $Res Function(_$GetNewsSuccessful) _then)
+  __$$GetNewsSuccessfulCopyWithImpl(_$GetNewsSuccessful _value, $Res Function(_$GetNewsSuccessful) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -221,8 +211,7 @@ class __$$GetNewsSuccessfulCopyWithImpl<$Res>
 /// @nodoc
 
 class _$GetNewsSuccessful implements GetNewsSuccessful {
-  const _$GetNewsSuccessful(final List<Articol> articole)
-      : _articole = articole;
+  const _$GetNewsSuccessful(final List<Articol> articole) : _articole = articole;
 
   final List<Articol> _articole;
   @override
@@ -246,8 +235,7 @@ class _$GetNewsSuccessful implements GetNewsSuccessful {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_articole));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_articole));
 
   @JsonKey(ignore: true)
   @override
@@ -325,31 +313,25 @@ class _$GetNewsSuccessful implements GetNewsSuccessful {
 }
 
 abstract class GetNewsSuccessful implements GetNews {
-  const factory GetNewsSuccessful(final List<Articol> articole) =
-      _$GetNewsSuccessful;
+  const factory GetNewsSuccessful(final List<Articol> articole) = _$GetNewsSuccessful;
 
   List<Articol> get articole;
   @JsonKey(ignore: true)
-  _$$GetNewsSuccessfulCopyWith<_$GetNewsSuccessful> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetNewsSuccessfulCopyWith<_$GetNewsSuccessful> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GetNewsErrorCopyWith<$Res> {
-  factory _$$GetNewsErrorCopyWith(
-          _$GetNewsError value, $Res Function(_$GetNewsError) then) =
+  factory _$$GetNewsErrorCopyWith(_$GetNewsError value, $Res Function(_$GetNewsError) then) =
       __$$GetNewsErrorCopyWithImpl<$Res>;
   @useResult
   $Res call({Object error, StackTrace stackTrace});
 }
 
 /// @nodoc
-class __$$GetNewsErrorCopyWithImpl<$Res>
-    extends _$GetNewsCopyWithImpl<$Res, _$GetNewsError>
+class __$$GetNewsErrorCopyWithImpl<$Res> extends _$GetNewsCopyWithImpl<$Res, _$GetNewsError>
     implements _$$GetNewsErrorCopyWith<$Res> {
-  __$$GetNewsErrorCopyWithImpl(
-      _$GetNewsError _value, $Res Function(_$GetNewsError) _then)
-      : super(_value, _then);
+  __$$GetNewsErrorCopyWithImpl(_$GetNewsError _value, $Res Function(_$GetNewsError) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -388,13 +370,11 @@ class _$GetNewsError implements GetNewsError {
         (other.runtimeType == runtimeType &&
             other is _$GetNewsError &&
             const DeepCollectionEquality().equals(other.error, error) &&
-            (identical(other.stackTrace, stackTrace) ||
-                other.stackTrace == stackTrace));
+            (identical(other.stackTrace, stackTrace) || other.stackTrace == stackTrace));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(error), stackTrace);
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(error), stackTrace);
 
   @JsonKey(ignore: true)
   @override
@@ -472,12 +452,10 @@ class _$GetNewsError implements GetNewsError {
 }
 
 abstract class GetNewsError implements GetNews {
-  const factory GetNewsError(final Object error, final StackTrace stackTrace) =
-      _$GetNewsError;
+  const factory GetNewsError(final Object error, final StackTrace stackTrace) = _$GetNewsError;
 
   Object get error;
   StackTrace get stackTrace;
   @JsonKey(ignore: true)
-  _$$GetNewsErrorCopyWith<_$GetNewsError> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetNewsErrorCopyWith<_$GetNewsError> get copyWith => throw _privateConstructorUsedError;
 }
