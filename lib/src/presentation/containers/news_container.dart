@@ -9,7 +9,7 @@ class NewsContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return StoreConnector<AppState, List<Articol>>(
       builder: builder,
-      converter: (Store<AppState> store) => store.state.articole,
+      converter: (Store<AppState> store) => store.state.news.articole,
     );
   }
 }

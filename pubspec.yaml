@@ -22,6 +22,8 @@ dependencies:
   flutter_redux: ^0.10.0
   shared_preferences: ^2.0.15
   url_launcher: ^6.1.6
+  firebase_core: ^2.11.8
+  firebase_auth: ^4.6.0
 
 dev_dependencies:
   flutter_test:
