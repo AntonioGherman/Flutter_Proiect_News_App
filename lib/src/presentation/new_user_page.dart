@@ -61,6 +61,7 @@ class _NewUserPageState extends State<NewUserPage> {
     if (password.length < 6) {
       return;
     }
+    StoreProvider.of<AppState>(context).dispatch(const GetNews.start(search: ''));
     StoreProvider.of<AppState>(context).dispatch(CreateUserStart(email: email, password: password, result: _onResult));
   }
 

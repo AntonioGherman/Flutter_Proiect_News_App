@@ -312,6 +312,7 @@ NewsState _$NewsStateFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$NewsState {
   List<Articol> get articole => throw _privateConstructorUsedError;
+  String get search => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -324,7 +325,7 @@ abstract class $NewsStateCopyWith<$Res> {
   factory $NewsStateCopyWith(NewsState value, $Res Function(NewsState) then) =
       _$NewsStateCopyWithImpl<$Res, NewsState>;
   @useResult
-  $Res call({List<Articol> articole});
+  $Res call({List<Articol> articole, String search});
 }
 
 /// @nodoc
@@ -341,12 +342,17 @@ class _$NewsStateCopyWithImpl<$Res, $Val extends NewsState>
   @override
   $Res call({
     Object? articole = null,
+    Object? search = null,
   }) {
     return _then(_value.copyWith(
       articole: null == articole
           ? _value.articole
           : articole // ignore: cast_nullable_to_non_nullable
               as List<Articol>,
+      search: null == search
+          ? _value.search
+          : search // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -358,7 +364,7 @@ abstract class _$$NewsState$CopyWith<$Res> implements $NewsStateCopyWith<$Res> {
       __$$NewsState$CopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Articol> articole});
+  $Res call({List<Articol> articole, String search});
 }
 
 /// @nodoc
@@ -373,12 +379,17 @@ class __$$NewsState$CopyWithImpl<$Res>
   @override
   $Res call({
     Object? articole = null,
+    Object? search = null,
   }) {
     return _then(_$NewsState$(
       articole: null == articole
           ? _value._articole
           : articole // ignore: cast_nullable_to_non_nullable
               as List<Articol>,
+      search: null == search
+          ? _value.search
+          : search // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -386,7 +397,8 @@ class __$$NewsState$CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$NewsState$ implements NewsState$ {
-  const _$NewsState$({final List<Articol> articole = const <Articol>[]})
+  const _$NewsState$(
+      {final List<Articol> articole = const <Articol>[], this.search = ''})
       : _articole = articole;
 
   factory _$NewsState$.fromJson(Map<String, dynamic> json) =>
@@ -402,8 +414,12 @@ class _$NewsState$ implements NewsState$ {
   }
 
   @override
+  @JsonKey()
+  final String search;
+
+  @override
   String toString() {
-    return 'NewsState(articole: $articole)';
+    return 'NewsState(articole: $articole, search: $search)';
   }
 
   @override
@@ -411,13 +427,14 @@ class _$NewsState$ implements NewsState$ {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NewsState$ &&
-            const DeepCollectionEquality().equals(other._articole, _articole));
+            const DeepCollectionEquality().equals(other._articole, _articole) &&
+            (identical(other.search, search) || other.search == search));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_articole));
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_articole), search);
 
   @JsonKey(ignore: true)
   @override
@@ -434,13 +451,16 @@ class _$NewsState$ implements NewsState$ {
 }
 
 abstract class NewsState$ implements NewsState {
-  const factory NewsState$({final List<Articol> articole}) = _$NewsState$;
+  const factory NewsState$(
+      {final List<Articol> articole, final String search}) = _$NewsState$;
 
   factory NewsState$.fromJson(Map<String, dynamic> json) =
       _$NewsState$.fromJson;
 
   @override
   List<Articol> get articole;
+  @override
+  String get search;
   @override
   @JsonKey(ignore: true)
   _$$NewsState$CopyWith<_$NewsState$> get copyWith =>

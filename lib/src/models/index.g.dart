@@ -34,11 +34,13 @@ _$NewsState$ _$$NewsState$FromJson(Map<String, dynamic> json) => _$NewsState$(
               ?.map((e) => Articol.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const <Articol>[],
+      search: json['search'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$NewsState$ToJson(_$NewsState$ instance) =>
     <String, dynamic>{
       'articole': instance.articole,
+      'search': instance.search,
     };
 
 _$AppUser$ _$$AppUser$FromJson(Map<String, dynamic> json) => _$AppUser$(

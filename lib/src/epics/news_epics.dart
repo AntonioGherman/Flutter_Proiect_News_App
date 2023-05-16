@@ -17,7 +17,7 @@ class NewsEpics implements EpicClass<AppState> {
 
   Stream<dynamic> _getNewsStart(Stream<GetNewsStart> actions, EpicStore<AppState> store) {
     return actions
-        .asyncMap((GetNewsStart action) => _apiCall.apiCall())
+        .asyncMap((GetNewsStart action) => _apiCall.apiCall(search: action.search))
         .map((List<Articol> news) => GetNews.successful(news))
         .onErrorReturnWith((Object error, StackTrace stacktrace) => GetNews.error(error, stacktrace));
   }

@@ -18,21 +18,21 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$GetNews {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() start,
+    required TResult Function(String search) start,
     required TResult Function(List<Articol> articole) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? start,
+    TResult? Function(String search)? start,
     TResult? Function(List<Articol> articole)? successful,
     TResult? Function(Object error, StackTrace stackTrace)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? start,
+    TResult Function(String search)? start,
     TResult Function(List<Articol> articole)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
@@ -84,6 +84,8 @@ abstract class _$$GetNewsStartCopyWith<$Res> {
   factory _$$GetNewsStartCopyWith(
           _$GetNewsStart value, $Res Function(_$GetNewsStart) then) =
       __$$GetNewsStartCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String search});
 }
 
 /// @nodoc
@@ -93,57 +95,81 @@ class __$$GetNewsStartCopyWithImpl<$Res>
   __$$GetNewsStartCopyWithImpl(
       _$GetNewsStart _value, $Res Function(_$GetNewsStart) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? search = null,
+  }) {
+    return _then(_$GetNewsStart(
+      search: null == search
+          ? _value.search
+          : search // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$GetNewsStart implements GetNewsStart {
-  const _$GetNewsStart();
+  const _$GetNewsStart({required this.search});
+
+  @override
+  final String search;
 
   @override
   String toString() {
-    return 'GetNews.start()';
+    return 'GetNews.start(search: $search)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GetNewsStart);
+        (other.runtimeType == runtimeType &&
+            other is _$GetNewsStart &&
+            (identical(other.search, search) || other.search == search));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, search);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetNewsStartCopyWith<_$GetNewsStart> get copyWith =>
+      __$$GetNewsStartCopyWithImpl<_$GetNewsStart>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() start,
+    required TResult Function(String search) start,
     required TResult Function(List<Articol> articole) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
-    return start();
+    return start(search);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? start,
+    TResult? Function(String search)? start,
     TResult? Function(List<Articol> articole)? successful,
     TResult? Function(Object error, StackTrace stackTrace)? error,
   }) {
-    return start?.call();
+    return start?.call(search);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? start,
+    TResult Function(String search)? start,
     TResult Function(List<Articol> articole)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
   }) {
     if (start != null) {
-      return start();
+      return start(search);
     }
     return orElse();
   }
@@ -184,7 +210,12 @@ class _$GetNewsStart implements GetNewsStart {
 }
 
 abstract class GetNewsStart implements GetNews {
-  const factory GetNewsStart() = _$GetNewsStart;
+  const factory GetNewsStart({required final String search}) = _$GetNewsStart;
+
+  String get search;
+  @JsonKey(ignore: true)
+  _$$GetNewsStartCopyWith<_$GetNewsStart> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -258,7 +289,7 @@ class _$GetNewsSuccessful implements GetNewsSuccessful {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() start,
+    required TResult Function(String search) start,
     required TResult Function(List<Articol> articole) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
@@ -268,7 +299,7 @@ class _$GetNewsSuccessful implements GetNewsSuccessful {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? start,
+    TResult? Function(String search)? start,
     TResult? Function(List<Articol> articole)? successful,
     TResult? Function(Object error, StackTrace stackTrace)? error,
   }) {
@@ -278,7 +309,7 @@ class _$GetNewsSuccessful implements GetNewsSuccessful {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? start,
+    TResult Function(String search)? start,
     TResult Function(List<Articol> articole)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
@@ -405,7 +436,7 @@ class _$GetNewsError implements GetNewsError {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() start,
+    required TResult Function(String search) start,
     required TResult Function(List<Articol> articole) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
@@ -415,7 +446,7 @@ class _$GetNewsError implements GetNewsError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? start,
+    TResult? Function(String search)? start,
     TResult? Function(List<Articol> articole)? successful,
     TResult? Function(Object error, StackTrace stackTrace)? error,
   }) {
@@ -425,7 +456,7 @@ class _$GetNewsError implements GetNewsError {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? start,
+    TResult Function(String search)? start,
     TResult Function(List<Articol> articole)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
