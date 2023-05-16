@@ -6,7 +6,7 @@ import '../../models/index.dart';
 import 'drawer/my_drawer.dart';
 
 class EditUserPage extends StatefulWidget {
-  const EditUserPage({Key? key}) : super(key: key);
+  const EditUserPage({super.key});
 
   @override
   State<EditUserPage> createState() => _EditUserPageState();
@@ -78,7 +78,7 @@ class _EditUserPageState extends State<EditUserPage> {
       builder: (BuildContext context) {
         return AlertDialog(
             title: const Text('Edit successful'),
-            content: Text('Your information was changed with successful'),
+            content: const Text('Your information was changed with successful'),
             actions: <Widget>[
               TextButton(
                   onPressed: () {
