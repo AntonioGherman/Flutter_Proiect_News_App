@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 
-import '../actions/index.dart';
-import '../models/index.dart';
+import '../../actions/index.dart';
+import '../../models/index.dart';
 
 class NewUserPage extends StatefulWidget {
   const NewUserPage({super.key});
@@ -55,10 +55,12 @@ class _NewUserPageState extends State<NewUserPage> {
     final String email = _email.text;
     final String password = _password.text;
 
-    if (!email.contains('@')) {
+    if (!email.contains('@gmail.com') ) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('The email address you entered is invalid')));
       return;
     }
     if (password.length < 6) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Password must contain at least 6 characters')));
       return;
     }
     StoreProvider.of<AppState>(context).dispatch(const GetNews.start(search: ''));

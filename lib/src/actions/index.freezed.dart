@@ -514,6 +514,141 @@ abstract class GetNewsError implements GetNews {
 }
 
 /// @nodoc
+mixin _$SetFavorie {
+  int get index => throw _privateConstructorUsedError;
+  bool get favorite => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $SetFavorieCopyWith<SetFavorie> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SetFavorieCopyWith<$Res> {
+  factory $SetFavorieCopyWith(
+          SetFavorie value, $Res Function(SetFavorie) then) =
+      _$SetFavorieCopyWithImpl<$Res, SetFavorie>;
+  @useResult
+  $Res call({int index, bool favorite});
+}
+
+/// @nodoc
+class _$SetFavorieCopyWithImpl<$Res, $Val extends SetFavorie>
+    implements $SetFavorieCopyWith<$Res> {
+  _$SetFavorieCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+    Object? favorite = null,
+  }) {
+    return _then(_value.copyWith(
+      index: null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+      favorite: null == favorite
+          ? _value.favorite
+          : favorite // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$SetFavorie$CopyWith<$Res>
+    implements $SetFavorieCopyWith<$Res> {
+  factory _$$SetFavorie$CopyWith(
+          _$SetFavorie$ value, $Res Function(_$SetFavorie$) then) =
+      __$$SetFavorie$CopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int index, bool favorite});
+}
+
+/// @nodoc
+class __$$SetFavorie$CopyWithImpl<$Res>
+    extends _$SetFavorieCopyWithImpl<$Res, _$SetFavorie$>
+    implements _$$SetFavorie$CopyWith<$Res> {
+  __$$SetFavorie$CopyWithImpl(
+      _$SetFavorie$ _value, $Res Function(_$SetFavorie$) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+    Object? favorite = null,
+  }) {
+    return _then(_$SetFavorie$(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == favorite
+          ? _value.favorite
+          : favorite // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SetFavorie$ implements SetFavorie$ {
+  const _$SetFavorie$(this.index, this.favorite);
+
+  @override
+  final int index;
+  @override
+  final bool favorite;
+
+  @override
+  String toString() {
+    return 'SetFavorie(index: $index, favorite: $favorite)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SetFavorie$ &&
+            (identical(other.index, index) || other.index == index) &&
+            (identical(other.favorite, favorite) ||
+                other.favorite == favorite));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index, favorite);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SetFavorie$CopyWith<_$SetFavorie$> get copyWith =>
+      __$$SetFavorie$CopyWithImpl<_$SetFavorie$>(this, _$identity);
+}
+
+abstract class SetFavorie$ implements SetFavorie {
+  const factory SetFavorie$(final int index, final bool favorite) =
+      _$SetFavorie$;
+
+  @override
+  int get index;
+  @override
+  bool get favorite;
+  @override
+  @JsonKey(ignore: true)
+  _$$SetFavorie$CopyWith<_$SetFavorie$> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$CreateUser {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -2491,5 +2626,524 @@ abstract class LogOutError implements LogOut {
   StackTrace get stackTrace;
   @JsonKey(ignore: true)
   _$$LogOutErrorCopyWith<_$LogOutError> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$EditUser {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String firstName, String lastName) start,
+    required TResult Function(AppUser? user) successful,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String firstName, String lastName)? start,
+    TResult? Function(AppUser? user)? successful,
+    TResult? Function(Object error, StackTrace stackTrace)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String firstName, String lastName)? start,
+    TResult Function(AppUser? user)? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EditUserStart value) start,
+    required TResult Function(EditUserSuccessful value) successful,
+    required TResult Function(EditUserError value) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EditUserStart value)? start,
+    TResult? Function(EditUserSuccessful value)? successful,
+    TResult? Function(EditUserError value)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EditUserStart value)? start,
+    TResult Function(EditUserSuccessful value)? successful,
+    TResult Function(EditUserError value)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EditUserCopyWith<$Res> {
+  factory $EditUserCopyWith(EditUser value, $Res Function(EditUser) then) =
+      _$EditUserCopyWithImpl<$Res, EditUser>;
+}
+
+/// @nodoc
+class _$EditUserCopyWithImpl<$Res, $Val extends EditUser>
+    implements $EditUserCopyWith<$Res> {
+  _$EditUserCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+}
+
+/// @nodoc
+abstract class _$$EditUserStartCopyWith<$Res> {
+  factory _$$EditUserStartCopyWith(
+          _$EditUserStart value, $Res Function(_$EditUserStart) then) =
+      __$$EditUserStartCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String firstName, String lastName});
+}
+
+/// @nodoc
+class __$$EditUserStartCopyWithImpl<$Res>
+    extends _$EditUserCopyWithImpl<$Res, _$EditUserStart>
+    implements _$$EditUserStartCopyWith<$Res> {
+  __$$EditUserStartCopyWithImpl(
+      _$EditUserStart _value, $Res Function(_$EditUserStart) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? firstName = null,
+    Object? lastName = null,
+  }) {
+    return _then(_$EditUserStart(
+      firstName: null == firstName
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String,
+      lastName: null == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EditUserStart implements EditUserStart {
+  const _$EditUserStart({required this.firstName, required this.lastName});
+
+  @override
+  final String firstName;
+  @override
+  final String lastName;
+
+  @override
+  String toString() {
+    return 'EditUser.start(firstName: $firstName, lastName: $lastName)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditUserStart &&
+            (identical(other.firstName, firstName) ||
+                other.firstName == firstName) &&
+            (identical(other.lastName, lastName) ||
+                other.lastName == lastName));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, firstName, lastName);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditUserStartCopyWith<_$EditUserStart> get copyWith =>
+      __$$EditUserStartCopyWithImpl<_$EditUserStart>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String firstName, String lastName) start,
+    required TResult Function(AppUser? user) successful,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return start(firstName, lastName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String firstName, String lastName)? start,
+    TResult? Function(AppUser? user)? successful,
+    TResult? Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return start?.call(firstName, lastName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String firstName, String lastName)? start,
+    TResult Function(AppUser? user)? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (start != null) {
+      return start(firstName, lastName);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EditUserStart value) start,
+    required TResult Function(EditUserSuccessful value) successful,
+    required TResult Function(EditUserError value) error,
+  }) {
+    return start(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EditUserStart value)? start,
+    TResult? Function(EditUserSuccessful value)? successful,
+    TResult? Function(EditUserError value)? error,
+  }) {
+    return start?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EditUserStart value)? start,
+    TResult Function(EditUserSuccessful value)? successful,
+    TResult Function(EditUserError value)? error,
+    required TResult orElse(),
+  }) {
+    if (start != null) {
+      return start(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditUserStart implements EditUser {
+  const factory EditUserStart(
+      {required final String firstName,
+      required final String lastName}) = _$EditUserStart;
+
+  String get firstName;
+  String get lastName;
+  @JsonKey(ignore: true)
+  _$$EditUserStartCopyWith<_$EditUserStart> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EditUserSuccessfulCopyWith<$Res> {
+  factory _$$EditUserSuccessfulCopyWith(_$EditUserSuccessful value,
+          $Res Function(_$EditUserSuccessful) then) =
+      __$$EditUserSuccessfulCopyWithImpl<$Res>;
+  @useResult
+  $Res call({AppUser? user});
+
+  $AppUserCopyWith<$Res>? get user;
+}
+
+/// @nodoc
+class __$$EditUserSuccessfulCopyWithImpl<$Res>
+    extends _$EditUserCopyWithImpl<$Res, _$EditUserSuccessful>
+    implements _$$EditUserSuccessfulCopyWith<$Res> {
+  __$$EditUserSuccessfulCopyWithImpl(
+      _$EditUserSuccessful _value, $Res Function(_$EditUserSuccessful) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? user = freezed,
+  }) {
+    return _then(_$EditUserSuccessful(
+      freezed == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as AppUser?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AppUserCopyWith<$Res>? get user {
+    if (_value.user == null) {
+      return null;
+    }
+
+    return $AppUserCopyWith<$Res>(_value.user!, (value) {
+      return _then(_value.copyWith(user: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$EditUserSuccessful implements EditUserSuccessful {
+  const _$EditUserSuccessful(this.user);
+
+  @override
+  final AppUser? user;
+
+  @override
+  String toString() {
+    return 'EditUser.successful(user: $user)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditUserSuccessful &&
+            (identical(other.user, user) || other.user == user));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, user);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditUserSuccessfulCopyWith<_$EditUserSuccessful> get copyWith =>
+      __$$EditUserSuccessfulCopyWithImpl<_$EditUserSuccessful>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String firstName, String lastName) start,
+    required TResult Function(AppUser? user) successful,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return successful(user);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String firstName, String lastName)? start,
+    TResult? Function(AppUser? user)? successful,
+    TResult? Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return successful?.call(user);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String firstName, String lastName)? start,
+    TResult Function(AppUser? user)? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (successful != null) {
+      return successful(user);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EditUserStart value) start,
+    required TResult Function(EditUserSuccessful value) successful,
+    required TResult Function(EditUserError value) error,
+  }) {
+    return successful(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EditUserStart value)? start,
+    TResult? Function(EditUserSuccessful value)? successful,
+    TResult? Function(EditUserError value)? error,
+  }) {
+    return successful?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EditUserStart value)? start,
+    TResult Function(EditUserSuccessful value)? successful,
+    TResult Function(EditUserError value)? error,
+    required TResult orElse(),
+  }) {
+    if (successful != null) {
+      return successful(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditUserSuccessful implements EditUser, UserAction {
+  const factory EditUserSuccessful(final AppUser? user) = _$EditUserSuccessful;
+
+  AppUser? get user;
+  @JsonKey(ignore: true)
+  _$$EditUserSuccessfulCopyWith<_$EditUserSuccessful> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EditUserErrorCopyWith<$Res> {
+  factory _$$EditUserErrorCopyWith(
+          _$EditUserError value, $Res Function(_$EditUserError) then) =
+      __$$EditUserErrorCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Object error, StackTrace stackTrace});
+}
+
+/// @nodoc
+class __$$EditUserErrorCopyWithImpl<$Res>
+    extends _$EditUserCopyWithImpl<$Res, _$EditUserError>
+    implements _$$EditUserErrorCopyWith<$Res> {
+  __$$EditUserErrorCopyWithImpl(
+      _$EditUserError _value, $Res Function(_$EditUserError) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+    Object? stackTrace = null,
+  }) {
+    return _then(_$EditUserError(
+      null == error ? _value.error : error,
+      null == stackTrace
+          ? _value.stackTrace
+          : stackTrace // ignore: cast_nullable_to_non_nullable
+              as StackTrace,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EditUserError implements EditUserError {
+  const _$EditUserError(this.error, this.stackTrace);
+
+  @override
+  final Object error;
+  @override
+  final StackTrace stackTrace;
+
+  @override
+  String toString() {
+    return 'EditUser.error(error: $error, stackTrace: $stackTrace)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditUserError &&
+            const DeepCollectionEquality().equals(other.error, error) &&
+            (identical(other.stackTrace, stackTrace) ||
+                other.stackTrace == stackTrace));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(error), stackTrace);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditUserErrorCopyWith<_$EditUserError> get copyWith =>
+      __$$EditUserErrorCopyWithImpl<_$EditUserError>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String firstName, String lastName) start,
+    required TResult Function(AppUser? user) successful,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return error(this.error, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String firstName, String lastName)? start,
+    TResult? Function(AppUser? user)? successful,
+    TResult? Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return error?.call(this.error, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String firstName, String lastName)? start,
+    TResult Function(AppUser? user)? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this.error, stackTrace);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EditUserStart value) start,
+    required TResult Function(EditUserSuccessful value) successful,
+    required TResult Function(EditUserError value) error,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EditUserStart value)? start,
+    TResult? Function(EditUserSuccessful value)? successful,
+    TResult? Function(EditUserError value)? error,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EditUserStart value)? start,
+    TResult Function(EditUserSuccessful value)? successful,
+    TResult Function(EditUserError value)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditUserError implements EditUser {
+  const factory EditUserError(final Object error, final StackTrace stackTrace) =
+      _$EditUserError;
+
+  Object get error;
+  StackTrace get stackTrace;
+  @JsonKey(ignore: true)
+  _$$EditUserErrorCopyWith<_$EditUserError> get copyWith =>
       throw _privateConstructorUsedError;
 }

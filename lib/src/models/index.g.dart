@@ -48,6 +48,8 @@ _$AppUser$ _$$AppUser$FromJson(Map<String, dynamic> json) => _$AppUser$(
       userName: json['userName'] as String,
       email: json['email'] as String,
       profileImages: json['profileImages'] as String?,
+      firstName: json['firstName'] as String?,
+      lastName: json['lastName'] as String?,
     );
 
 Map<String, dynamic> _$$AppUser$ToJson(_$AppUser$ instance) =>
@@ -56,6 +58,8 @@ Map<String, dynamic> _$$AppUser$ToJson(_$AppUser$ instance) =>
       'userName': instance.userName,
       'email': instance.email,
       'profileImages': instance.profileImages,
+      'firstName': instance.firstName,
+      'lastName': instance.lastName,
     };
 
 _$AuthState$ _$$AuthState$FromJson(Map<String, dynamic> json) => _$AuthState$(

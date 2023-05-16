@@ -4,10 +4,12 @@ import '../models/index.dart';
 
 part 'index.freezed.dart';
 part 'news/get_news.dart';
+part 'news/set.dart';
 part 'auth/create_user.dart';
 part 'auth/login_user.dart';
 part 'auth/check_user.dart';
 part 'auth/log_out_user.dart';
+part 'auth/edit_user.dart';
 
 abstract class UserAction {
   AppUser? get user;

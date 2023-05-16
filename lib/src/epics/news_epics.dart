@@ -21,5 +21,4 @@ class NewsEpics implements EpicClass<AppState> {
         .map((List<Articol> news) => GetNews.successful(news))
         .onErrorReturnWith((Object error, StackTrace stacktrace) => GetNews.error(error, stacktrace));
   }
-
 }

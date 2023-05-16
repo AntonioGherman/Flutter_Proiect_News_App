@@ -9,14 +9,12 @@ class ApiCall {
   final Client _client;
 
   Future<List<Articol>> apiCall({required String search}) async {
-    final Uri uri =
-        Uri.parse('https://hn.algolia.com/api/v1/search?tags=front_page');
+    final Uri uri = Uri.parse('https://hn.algolia.com/api/v1/search?tags=front_page');
     final Response response = await _client.get(
       uri,
     );
     if (response.statusCode == 200) {
-      final Map<String, dynamic> mapResponse =
-          jsonDecode(response.body) as Map<String, dynamic>;
+      final Map<String, dynamic> mapResponse = jsonDecode(response.body) as Map<String, dynamic>;
       final List<dynamic> result = mapResponse['hits'] as List<dynamic>;
 
       if (search.compareTo('') == 0) {
@@ -29,8 +27,7 @@ class ApiCall {
             .cast<Map<dynamic, dynamic>>()
             .map((Map<dynamic, dynamic> json) => Articol.fromJson(json))
             .toList()
-            .where((Articol element) =>
-                element.title.toLowerCase().contains(search.toLowerCase()))
+            .where((Articol element) => element.title.toLowerCase().contains(search.toLowerCase()))
             .toList();
       }
     }

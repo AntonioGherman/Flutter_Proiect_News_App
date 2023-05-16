@@ -17,6 +17,7 @@ class AuthEpics implements EpicClass<AppState> {
       TypedEpic<AppState, LoginUserStart>(_loginUserStart).call,
       TypedEpic<AppState, CheckUserStart>(_checkUserStart).call,
       TypedEpic<AppState, LogOutStart>(_logOutUserStart).call,
+      TypedEpic<AppState, EditUserStart>(_editUserStart).call,
     ])(actions, store);
   }
 
@@ -55,6 +56,15 @@ class AuthEpics implements EpicClass<AppState> {
           .asyncMap((_) => _api.logOut())
           .mapTo(const LogOut.successful())
           .onErrorReturnWith((Object error, StackTrace stackTrace) => LogOut.error(error, stackTrace));
+    });
+  }
+
+  Stream<dynamic> _editUserStart(Stream<EditUserStart> actions, EpicStore<AppState> store) {
+    return actions.flatMap((EditUserStart actions) {
+      return Stream<void>.value(null)
+          .asyncMap((_) => _api.editUser(firstName: actions.firstName, lastName: actions.lastName))
+          .map((AppUser? user) => EditUser.successful(user))
+          .onErrorReturnWith((Object error, StackTrace stackTrace) => EditUser.error(error, stackTrace));
     });
   }
 }

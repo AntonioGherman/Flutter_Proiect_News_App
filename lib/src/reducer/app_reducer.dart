@@ -14,7 +14,7 @@ AppState reducer(AppState state, dynamic action) {
     return const AppState();
   }
 
-  return state.copyWith(auth: authReducer(state.auth, action),news: newsReducer(state.news,action));
+  return state.copyWith(auth: authReducer(state.auth, action), news: newsReducer(state.news, action));
 }
 
 // Reducer<AppState> _reducer = combineReducers(<Reducer<AppState>>[
