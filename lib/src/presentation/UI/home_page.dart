@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_redux/flutter_redux.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../actions/index.dart';
 import '../../models/index.dart';
 import '../containers/index.dart';
 import 'drawer/my_drawer.dart';
+import 'widget/searchBar.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -19,24 +18,6 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
   }
-
-  Widget searchBar(List<Articol> articole) {
-    return SizedBox(
-        height: 40,
-        width: 310,
-        child: TextField(
-          decoration: InputDecoration(
-              filled: true,
-              border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: BorderSide.none),
-              contentPadding: const EdgeInsets.symmetric(vertical: 10),
-              hintText: 'Search',
-              prefixIcon: const Icon(Icons.search)),
-          onChanged: (String search) {
-            StoreProvider.of<AppState>(context).dispatch(GetNewsStart(search: search));
-          },
-        ));
-  }
-
   @override
   Widget build(BuildContext context) {
     return UserContainer(
@@ -63,8 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   const Padding(padding: EdgeInsets.all(4.0)),
-                  Row(children: <Widget>[
-                    Expanded(child: searchBar(articole)),
+                  Row(children: const <Widget>[
+                    Expanded(child: SearchBar()),
                     // IconButton(
                     //   onPressed: () {},
                     //   icon: const Icon(Icons.sort),
