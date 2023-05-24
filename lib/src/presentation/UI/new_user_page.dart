@@ -19,24 +19,23 @@ class _NewUserPageState extends State<NewUserPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
         const Center(
-        child: Text('Create an account',
-          style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),)
-        ),
-            const SizedBox(height: 40),
-            Center(
-      child: Padding(
+            child: Text(
+          'Create an account',
+          style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
+        )),
+        const SizedBox(height: 40),
+        Center(
+          child: Padding(
             padding: const EdgeInsets.all(10),
             child: SafeArea(
               child: Column(
                 children: <Widget>[
                   const Padding(
                     padding: EdgeInsets.all(10),
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                        child: Text('Enter an email adress')),
+                    child: Align(alignment: Alignment.centerLeft, child: Text('Enter an email adress')),
                   ),
                   TextField(
                     decoration: const InputDecoration(border: OutlineInputBorder(), labelText: 'Email'),
@@ -47,8 +46,7 @@ class _NewUserPageState extends State<NewUserPage> {
                   const Padding(
                     padding: EdgeInsets.all(10),
                     child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text('Enter a password with at least 6 characters')),
+                        alignment: Alignment.centerLeft, child: Text('Enter a password with at least 6 characters')),
                   ),
                   TextField(
                     controller: _password,
@@ -58,7 +56,7 @@ class _NewUserPageState extends State<NewUserPage> {
                   ),
                   const SizedBox(height: 20),
                   SizedBox(
-                    width: 150,
+                      width: 150,
                       height: 40,
                       child: ElevatedButton(onPressed: _onCreate, child: const Text('Create User'))),
                   const SizedBox(height: 20),
@@ -76,22 +74,24 @@ class _NewUserPageState extends State<NewUserPage> {
                 ],
               ),
             ),
-      ),
-    ),
-          ],
-        ));
+          ),
+        ),
+      ],
+    ));
   }
 
   void _onCreate() {
     final String email = _email.text;
     final String password = _password.text;
 
-    if (!email.contains('@gmail.com') ) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('The email address you entered is invalid')));
+    if (!email.contains('@gmail.com')) {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(const SnackBar(content: Text('The email address you entered is invalid')));
       return;
     }
     if (password.length < 6) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Password must contain at least 6 characters')));
+      ScaffoldMessenger.of(context)
+          .showSnackBar(const SnackBar(content: Text('Password must contain at least 6 characters')));
       return;
     }
     StoreProvider.of<AppState>(context).dispatch(const GetNews.start(search: ''));

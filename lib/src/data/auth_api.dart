@@ -14,9 +14,9 @@ class AuthApi {
       return null;
     }
     final prefs = await SharedPreferences.getInstance();
-    final String? firstName= prefs.getString('${user.uid}firstName');
-    final String? lastName=prefs.getString('${user.uid}lastName');
-    if(firstName!=null && lastName!=null){
+    final String? firstName = prefs.getString('${user.uid}firstName');
+    final String? lastName = prefs.getString('${user.uid}lastName');
+    if (firstName != null && lastName != null) {
       return AppUser(
         id: user.uid,
         userName: '$firstName $lastName',
@@ -46,10 +46,10 @@ class AuthApi {
     final UserCredential credential = await _auth.signInWithEmailAndPassword(email: email, password: password);
     final User user = credential.user!;
     final prefs = await SharedPreferences.getInstance();
-    final String? firstName= prefs.getString('${user.uid}firstName');
-    final String? lastName=prefs.getString('${user.uid}lastName');
+    final String? firstName = prefs.getString('${user.uid}firstName');
+    final String? lastName = prefs.getString('${user.uid}lastName');
 
-    if(firstName!=null && lastName!=null){
+    if (firstName != null && lastName != null) {
       return AppUser(
         id: user.uid,
         userName: '$firstName $lastName',
@@ -83,5 +83,4 @@ class AuthApi {
       lastName: lastName,
     );
   }
-
 }

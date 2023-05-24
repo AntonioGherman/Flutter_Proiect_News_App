@@ -28,7 +28,7 @@ class _EditUserPageState extends State<EditUserPage> {
             padding: const EdgeInsets.all(10),
             child: SafeArea(
               child: Column(
-               // mainAxisAlignment: MainAxisAlignment.center,
+                // mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.only(bottom: 20),
@@ -36,13 +36,18 @@ class _EditUserPageState extends State<EditUserPage> {
                       child: SizedBox(
                         height: 115,
                         width: MediaQuery.of(context).size.width,
-                        child: const ListTile(contentPadding: EdgeInsets.all(10),
-                          title: Text('Edit your personal information',
-                          style: TextStyle(fontSize: 20),),
+                        child: const ListTile(
+                          contentPadding: EdgeInsets.all(10),
+                          title: Text(
+                            'Edit your personal information',
+                            style: TextStyle(fontSize: 20),
+                          ),
                           subtitle: Padding(
                             padding: EdgeInsets.only(top: 20),
-                            child: Text('Here you can change your username. You must enter your first and last name',
-                              style: TextStyle(fontSize: 15),),
+                            child: Text(
+                              'Here you can change your username. You must enter your first and last name',
+                              style: TextStyle(fontSize: 15),
+                            ),
                           ),
                         ),
                       ),
@@ -88,6 +93,5 @@ class _EditUserPageState extends State<EditUserPage> {
             ]);
       },
     );
-
   }
 }
