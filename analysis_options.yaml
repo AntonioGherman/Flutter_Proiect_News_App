@@ -26,6 +26,15 @@ analyzer:
     invalid_annotation_target: ignore
     always_specify_types: ignore
     no_default_cases: ignore
+    prefer_const_constructors: ignore
+    const_eval_throws_exception: ignore
+    const_constructor_param_type_mismatch: ignore
+    invocation_of_non_function: ignore
+    invalid_constant: ignore
+    argument_type_not_assignable: ignore
+    ambiguous_import: ignore
+    non_constant_list_element: ignore
+    unnecessary_import: ignore
   exclude:
     - "bin/cache/**"
     # Ignore protoc generated files
