@@ -4,7 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../models/index.dart';
 import '../containers/index.dart';
 import 'drawer/my_drawer.dart';
-import 'widget/searchBar.dart';
+import 'widget/search_bar.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
