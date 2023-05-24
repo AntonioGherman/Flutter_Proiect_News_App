@@ -12,3 +12,7 @@ The news can be accessed on the respective web pages. You can search for a certa
 
 The news is obtained by calling the API https://hn.algolia.com/api/v1/search?tags=front_page.
 
+
+
+https://github.com/AntonioGherman/Flutter_Proiect_News_App/assets/110396326/0aef59b9-5f2c-4b45-a244-41429ac31611
+
