@@ -1,16 +1,14 @@
-# news_app
+# News App
 
 A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+An app that displays specific news headlines along with basic news information.
 
-A few resources to get you started if this is your first Flutter project:
+The user can create an account for authentication. Firebase methods were used. He can change his username and it is saved as a preference.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The news can be accessed on the respective web pages. You can search for a certain news by a keyword.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The news is obtained by calling the API https://hn.algolia.com/api/v1/search?tags=front_page.
+
