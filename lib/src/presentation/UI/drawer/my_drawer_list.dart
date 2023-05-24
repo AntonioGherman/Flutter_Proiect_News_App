@@ -5,12 +5,12 @@ import '../../../actions/index.dart';
 import '../../../models/index.dart';
 
 class MyDrawerList extends StatelessWidget {
-  const MyDrawerList({Key? key}) : super(key: key);
+  const MyDrawerList({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       child: Column(
         children: <Widget>[
           menuItem(context, 1, 'Home Page', Icons.home, false),
@@ -36,7 +36,7 @@ class MyDrawerList extends StatelessWidget {
           }
         },
         child: Padding(
-          padding: EdgeInsets.all(15.0),
+          padding: const EdgeInsets.all(15.0),
           child: Row(
             children: [
               Expanded(
@@ -50,7 +50,7 @@ class MyDrawerList extends StatelessWidget {
                 flex: 3,
                 child: Text(
                   title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 16,
                   ),

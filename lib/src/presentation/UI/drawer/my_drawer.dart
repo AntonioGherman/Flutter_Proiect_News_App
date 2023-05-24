@@ -10,13 +10,11 @@ class MyDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: SingleChildScrollView(
-        child: Container(
-          child: Column(
-            children: const <Widget>[
-              MyDrawerHeader(),
-              MyDrawerList(),
-            ],
-          ),
+        child: Column(
+          children: const <Widget>[
+            MyDrawerHeader(),
+            MyDrawerList(),
+          ],
         ),
       ),
     );

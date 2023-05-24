@@ -25,6 +25,7 @@ analyzer:
     deprecated_member_use_from_same_package: ignore
     invalid_annotation_target: ignore
     always_specify_types: ignore
+    no_default_cases: ignore
   exclude:
     - "bin/cache/**"
     # Ignore protoc generated files

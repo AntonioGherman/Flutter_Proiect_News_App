@@ -4,7 +4,7 @@ import '../../../models/index.dart';
 import '../../containers/index.dart';
 
 class MyDrawerHeader extends StatefulWidget {
-  const MyDrawerHeader({Key? key}) : super(key: key);
+  const MyDrawerHeader({super.key});
 
   @override
   State<MyDrawerHeader> createState() => _MyDrawerHeaderState();
@@ -19,12 +19,12 @@ class _MyDrawerHeaderState extends State<MyDrawerHeader> {
           color: Colors.blue,
           width: double.infinity,
           height: 200,
-          padding: EdgeInsets.only(top: 20.0),
+          padding: const EdgeInsets.only(top: 20.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                margin: EdgeInsets.only(bottom: 10),
+                margin: const EdgeInsets.only(bottom: 10),
                 height: 70,
                 child: const CircleAvatar(
                   radius: 40,
